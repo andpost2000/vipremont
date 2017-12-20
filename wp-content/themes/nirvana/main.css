@@ -1,0 +1,75 @@
+.header-phone {
+  padding-top: 3px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .widget-top-center {
+    display: none;
+  }
+}
+
+.header-phone span {
+  position: relative;
+  padding-left: 60px;
+}
+
+.header-phone span::before {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 10px;
+  top: 0;
+  width: 45px;
+  height: 30px;
+  background-size: cover;
+}
+
+.header-phone .vel::before {
+  background: url(images/icons/velcom.svg) no-repeat;
+}
+
+.header-phone .mts::before {
+  background: url(images/icons/mts.svg) no-repeat;
+}
+
+.widget-top-center {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-100%);
+}
+
+.widget-top-center h2 {
+  font-size: 2em;
+  color: #1EC8BB;
+}
+
+#branding {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.text-p {
+  text-indent: 2em;
+}
+
+.services-ol {
+  margin-top: -1em;
+  margin-left: 2em;
+}
+
+.services hr {
+  margin-top: 2em;
+}
+
+.services h2 {
+  text-indent: 2em;
+}
