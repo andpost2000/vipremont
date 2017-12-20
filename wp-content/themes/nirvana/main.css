@@ -1,25 +1,69 @@
+.header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  max-width: 1180px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  margin-top: 7px;
+}
+
+.header-intro {
+  margin-left: 40px;
+}
+
+.header-intro li {
+  position: relative;
+  padding-left: 45px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.header-intro li:before {
+  position: absolute;
+  content: "";
+  top: 15px;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background-color: #1EC8BB;
+}
+
 .header-phone {
+  margin-left: auto;
   padding-top: 3px;
   display: flex;
   flex-direction: column;
 }
 
-@media (max-width: 1024px) {
-  .widget-top-center {
+@media (max-width: 767px) {
+  .header-intro {
     display: none;
   }
 }
 
+.header-phone b {
+  padding: 0 5px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  border-bottom: 2px solid #1EC8BB;
+}
+
 .header-phone span {
+  font-size: 20px;
   position: relative;
-  padding-left: 60px;
+  margin-bottom: 5px;
+  padding-left: 45px;
 }
 
 .header-phone span::before {
   position: absolute;
   content: '';
   display: block;
-  left: 10px;
+  left: 5px;
   top: 0;
   width: 45px;
   height: 30px;
@@ -32,23 +76,6 @@
 
 .header-phone .mts::before {
   background: url(images/icons/mts.svg) no-repeat;
-}
-
-.widget-top-center {
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-100%);
-}
-
-.widget-top-center h2 {
-  font-size: 2em;
-  color: #1EC8BB;
-}
-
-#branding {
-  display: flex;
-  justify-content: space-between;
 }
 
 .clearfix::after {
@@ -72,4 +99,60 @@
 
 .services h2 {
   text-indent: 2em;
+}
+
+.price-table tr {
+  outline: 1px dashed #222;
+}
+
+#content .price-table td {
+  padding: 0 5px;
+  vertical-align: middle;
+}
+
+.price-table .table-num {
+  border-right: 1px dashed;
+  width: 10%;
+}
+
+.price-table .table-name {
+  width: 50%;
+}
+
+.price-table .table-ed {
+  text-align: center;
+  width: 20%;
+  border-left: 1px dashed;
+  border-right: 1px dashed;
+}
+
+.price-table .table-price {
+  text-align: center;
+  width: 15%;
+}
+
+.price-table .table-title {
+  color: #000;
+}
+
+@media (max-width: 475px) {
+  .header-logo img {
+    height: 90px;
+  }
+  .header-phone b {
+    font-size: 18px;
+  }
+  .header-phone span {
+    padding-left: 35px;
+    font-size: 16px;
+  }
+  .header-phone span::before {
+    left: 0;
+    width: 39px;
+    height: 26px;
+  }
+  #content .price-table td {
+    padding: 2px;
+    font-size: 11px;
+  }
 }

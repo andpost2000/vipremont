@@ -33,17 +33,12 @@
 		<div id="masthead">
 		<?php cryout_masthead_hook(); ?>
 			<div id="branding" role="banner" >
-        <?php cryout_branding_hook();?>
         <?php dynamic_sidebar('sidebar-top-center'); ?>
-        <?php cryout_header_widgets_hook(); ?>
-				<!-- <div style="clear:both;"></div> -->
 			</div><!-- #branding -->
 			<a id="nav-toggle"><span>&nbsp;</span></a>
 			<nav id="access" role="navigation">
 				<?php cryout_access_hook();?>
 			</nav><!-- #access -->
-
-
 		</div><!-- #masthead -->
 	</header><!-- #header -->
 </div><!-- #header-full -->
